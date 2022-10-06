@@ -1,0 +1,544 @@
+@font-face {
+  font-family: "wahu";
+  src: url("../fonts/wahu2.otf") format("opentype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "wahu";
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url("../youkai/washi.jpg");
+  height: 100%;
+  position: relative;
+}
+
+.window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.window .window-past {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.window .window-past .noren {
+  position: absolute;
+  width: 40%;
+  height: 15%;
+  left: 21%;
+  background-image: url("../youkai/noren.png");
+  background-size: cover;
+}
+.window .window-past .noren-letter {
+  position: absolute;
+  font-size: 4vw;
+  color: white;
+  top: 6%;
+  left: 33%;
+}
+.window .window-past .kumo1 {
+  position: absolute;
+  left: 65%;
+  width: 15%;
+  padding-top: 9%;
+  background-image: url("../youkai/kumo-right.png");
+  background-size: cover;
+}
+.window .window-past .kumo2 {
+  position: absolute;
+  left: 1%;
+  top: 3%;
+  width: 15%;
+  padding-top: 5%;
+  background-image: url("../youkai/kumo-left.png");
+  background-size: cover;
+}
+
+.header {
+  width: 15%;
+  height: 100%;
+  background-color: rgb(208, 138, 206);
+  position: fixed;
+  right: 0;
+}
+.header .header-past {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.header .header-past .header-logo {
+  font-size: 2vw;
+  padding-top: 6%;
+  color: black;
+  text-decoration: none;
+}
+.header .header-past .header-logo:hover {
+  text-decoration: underline;
+}
+.header .header-past .profile {
+  width: 70%;
+  padding-top: 60%;
+  position: relative;
+}
+.header .header-past .profile:hover .profile-maru {
+  width: 120%;
+  padding-top: 120%;
+  top: -14%;
+  right: -8%;
+  z-index: 10;
+  background-color: rgba(190, 190, 190, 0);
+  animation: 1s linear alternate infinite youkaihover, 0.5s linear color1;
+}
+@keyframes youkaihover {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes color1 {
+  100% {
+    background-color: rgba(190, 190, 190, 0);
+  }
+}
+.header .header-past .profile .profile-picture {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 100%;
+  background-image: url("../youkai/profile-maru.png");
+  background-size: cover;
+}
+.header .header-past .profile .profile-maru {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  width: 90%;
+  padding-top: 90%;
+  border-radius: 50%;
+  background-image: url("../youkai/youkai10.png");
+  background-size: cover;
+  background-color: rgb(141, 32, 126);
+  transition: all 0.5s 0s ease;
+}
+.header .header-past .point {
+  width: 100%;
+  height: 10%;
+  position: relative;
+}
+.header .header-past .point .point-title {
+  font-size: 1.5vw;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+}
+.header .header-past .point .point-value {
+  font-size: 2.5vw;
+  position: absolute;
+  right: 5%;
+  top: 23%;
+}
+.header .header-past .point .point-bar {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 40%;
+  left: 5%;
+  background-image: url("../youkai/point-bar.png");
+  background-size: cover;
+}
+.header .header-past .menu {
+  width: 20%;
+  height: 2%;
+  margin-top: 10%;
+}
+.header .header-past .menu .menu-bar {
+  width: 100%;
+  padding-top: 100%;
+  margin-top: 15%;
+  background-image: url("../youkai/kamon1.png");
+  background-size: cover;
+}
+.header .header-past .menu .menu-name {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5vw;
+}
+.header .header-past .options {
+  margin-top: 5%;
+  width: 70%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: space-around;
+}
+.header .header-past .options .option {
+  width: 27%;
+  height: 35%;
+  background-color: rgb(163, 41, 137);
+  margin-bottom: 5%;
+  color: white;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  font-size: 1vw;
+}
+.header .header-past .sns {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.header .header-past .sns .insta {
+  width: 20%;
+  padding-top: 10%;
+}
+.header .header-past .sns .insta i {
+  font-size: 4rem;
+  color: purple;
+}
+.header .header-past .sns .twitter {
+  width: 20%;
+  padding-top: 10%;
+}
+.header .header-past .sns .twitter i {
+  font-size: 4rem;
+  color: purple;
+}
+
+.jikken {
+  width: 100%;
+  height: 2000px;
+}
+
+.merchandise {
+  position: absolute;
+  left: 2%;
+  width: 85%;
+  height: 86%;
+  bottom: 0;
+}
+.merchandise .produces-window {
+  width: 90%;
+  height: 85%;
+  margin-left: 5%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.merchandise .produces-window .up {
+  width: 50%;
+  height: 9%;
+  display: flex;
+}
+.merchandise .produces-window .up .button {
+  width: 25%;
+  height: 100%;
+  color: white;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-top: 7px double black;
+  border-left: 7px double black;
+  border-right: 7px double black;
+  z-index: 10;
+}
+.merchandise .produces-window .up #button1 {
+  background-color: rgb(181, 22, 22);
+  border-bottom: 7px double black;
+}
+.merchandise .produces-window .up #button1.active {
+  border-bottom: none;
+  margin-top: 1%;
+}
+.merchandise .produces-window .up #button2 {
+  background-color: rgb(147, 11, 143);
+  border-bottom: 7px double black;
+}
+.merchandise .produces-window .up #button2.active {
+  border-bottom: none;
+  margin-top: 1%;
+}
+.merchandise .produces-window .up #button3 {
+  background-color: rgb(190, 151, 20);
+  border-bottom: 7px double black;
+}
+.merchandise .produces-window .up #button3.active {
+  border-bottom: none;
+  margin-top: 1%;
+}
+.merchandise .produces-window .up #button4 {
+  background-color: rgb(17, 138, 14);
+  border-bottom: 7px double black;
+}
+.merchandise .produces-window .up #button4.active {
+  border-bottom: none;
+  margin-top: 1%;
+}
+.merchandise .produces-window .bottom {
+  width: 100%;
+  height: 91%;
+  position: relative;
+}
+.merchandise .produces-window .bottom .window {
+  width: 100%;
+  height: 100%;
+  border: 7px double black;
+  position: absolute;
+  overflow: auto;
+}
+.merchandise .produces-window .bottom .window .window-scroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce {
+  width: 20%;
+  height: 300px;
+  margin-top: 3%;
+  margin-right: 1%;
+  margin-left: 1%;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce .produce-picture {
+  width: 100%;
+  height: 70%;
+  background-image: url("../youkai/notes.jpg");
+  background-size: cover;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce .mini-cart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("../youkai/shoppingcar.png");
+  background-size: cover;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce .produce-detail {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce .produce-detail .produce-name {
+  font-size: 1vw;
+  width: 60%;
+  top: 20%;
+  position: absolute;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce .produce-detail .produce-price {
+  position: absolute;
+  font-size: 2vw;
+  right: 5%;
+  top: 20%;
+}
+.merchandise .produces-window .bottom .window .window-scroll .produce .produce-detail .produce-document {
+  position: absolute;
+  bottom: 0;
+}
+.merchandise .produces-window .bottom #window1 {
+  background-color: rgb(181, 22, 22);
+  display: none;
+}
+.merchandise .produces-window .bottom #window1.active {
+  display: block;
+}
+.merchandise .produces-window .bottom #window1.active .produce {
+  width: 20%;
+}
+.merchandise .produces-window .bottom #window2 {
+  background-color: rgb(147, 11, 143);
+  display: none;
+}
+.merchandise .produces-window .bottom #window2.active {
+  display: block;
+}
+.merchandise .produces-window .bottom #window2.active .produce {
+  width: 20%;
+}
+.merchandise .produces-window .bottom #window3 {
+  background-color: rgb(190, 151, 20);
+  display: none;
+}
+.merchandise .produces-window .bottom #window3.active {
+  display: block;
+}
+.merchandise .produces-window .bottom #window3.active .produce {
+  width: 20%;
+}
+.merchandise .produces-window .bottom #window4 {
+  background-color: rgb(17, 138, 14);
+  display: none;
+}
+.merchandise .produces-window .bottom #window4.active {
+  display: block;
+}
+.merchandise .produces-window .bottom #window4.active .produce {
+  width: 20%;
+}
+
+.mixamize {
+  position: absolute;
+  width: 5%;
+  height: 150px;
+  background-image: url("../youkai/take-waku.png");
+  background-size: cover;
+  top: 29%;
+  left: 0.8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0.9%;
+  padding-bottom: 0.5%;
+}
+.cart {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 3%;
+}
+.cart .cart-logo {
+  width: 100%;
+  height: 100%;
+  background-image: url("../youkai/shoppingcar.png");
+  background-size: cover;
+}
+
+.profile-edit {
+  position: absolute;
+  width: 75%;
+  height: 85%;
+  top: 8%;
+  left: 12%;
+  background-image: url("../youkai/washi.jpg");
+  z-index: 99999;
+  overflow: auto;
+  display: none;
+}
+.profile-edit::-webkit-scrollbar {
+  display: none;
+}
+.profile-edit .profile-edit-scroll {
+  width: 100%;
+  height: 2000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-edit .profile-edit-scroll .edit-title {
+  font-size: 5rem;
+  margin-top: 3%;
+  position: fixed;
+}
+.profile-edit .profile-edit-scroll label {
+  font-size: 2.5rem;
+  width: 40%;
+  margin-top: 15%;
+}
+.profile-edit .profile-edit-scroll label input {
+  width: 70%;
+  height: 140%;
+  font-size: 2rem;
+}
+.profile-edit .profile-edit-scroll .youkai-edit {
+  margin-top: 15%;
+  position: relative;
+  width: 90%;
+  height: 360px;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-title {
+  position: absolute;
+  left: 20%;
+  font-size: 4rem;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-avatar {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  z-index: 10;
+  top: -15%;
+  left: 2%;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-avatar .profile-picture {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 100%;
+  background-image: url("../youkai/profile-maru.png");
+  background-size: cover;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-avatar .profile-maru2 {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  width: 90%;
+  padding-top: 90%;
+  border-radius: 50%;
+  background-image: url("../youkai/youkai10.png");
+  background-size: cover;
+  background-color: rgb(141, 32, 126);
+  transition: all 0.5s 0s ease;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-window {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(169, 56, 8);
+  border-radius: 50px;
+  bottom: 0%;
+  overflow: auto;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-window .youkai-edit-window-scroll {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+.profile-edit .profile-edit-scroll .youkai-edit .youkai-edit-window .youkai-edit-window-scroll .one-youkai {
+  width: 200px;
+  height: 200px;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: rgb(36, 36, 36);
+  border-radius: 100px;
+  background-image: url("../youkai/youkai10.png");
+  background-size: cover;
+}
+
+.blackBack {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 99998;
+  display: none;
+}
+
+/*# sourceMappingURL=shop.css.map */
